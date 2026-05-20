@@ -56,6 +56,14 @@ dist/
 *.pem
 
 # ==============================
+# Fetched Notion content
+# 生のNotionコンテンツは画像の署名付きS3 URL（AWS一時鍵・失効する）を含むため、
+# 画像ローカル化（Step 7）が完了するまでコミットしない。sample-blocks.json は手書きの安全なデモなので例外。
+# ==============================
+src/content/outputs/*.json
+!src/content/outputs/sample-blocks.json
+
+# ==============================
 # OS / Editor
 # ==============================
 .DS_Store
