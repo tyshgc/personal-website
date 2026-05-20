@@ -7,14 +7,10 @@ export const InquiryPage: FC = () => {
   return (
     <Layout title="Inquiry" currentPath="/inquiry">
       <h1 class="text-4xl font-bold tracking-tight text-paper"># Inquiry</h1>
-      <p class="mt-6 text-sm text-muted">
-        お問い合わせはメールでお願いします。
-      </p>
+      <p class="mt-6 text-sm text-muted">お問い合わせはメールでお願いします。</p>
 
       <section class="mt-12">
-        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">
-          ## availability
-        </h2>
+        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">## availability</h2>
         <Card class="mt-4">
           <Card.Content>
             <p class="text-sm text-muted">
@@ -26,9 +22,7 @@ export const InquiryPage: FC = () => {
       </section>
 
       <section class="mt-12">
-        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">
-          ## contact
-        </h2>
+        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">## contact</h2>
         <p class="mt-4 font-mono text-sm">
           <a
             href="mailto:hello@tyshgc.pw"

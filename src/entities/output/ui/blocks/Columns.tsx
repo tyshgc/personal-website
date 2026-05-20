@@ -25,9 +25,7 @@ export const Columns: FC<ColumnsProps> = ({ block }) => {
   return (
     <div class="my-6 grid gap-4 md:grid-cols-2">
       {columns.map((col) => (
-        <div>
-          {col.children ? <BlockRenderer blocks={col.children} /> : null}
-        </div>
+        <div>{col.children ? <BlockRenderer blocks={col.children} /> : null}</div>
       ))}
     </div>
   );

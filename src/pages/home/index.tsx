@@ -16,18 +16,14 @@ export const HomePage: FC<HomePageProps> = ({ latestOutputs, externals }) => {
   return (
     <Layout currentPath="/">
       <section>
-        <h1 class="text-4xl font-bold tracking-tight text-paper">
-          # Tsuyoshi Higuchi
-        </h1>
+        <h1 class="text-4xl font-bold tracking-tight text-paper"># Tsuyoshi Higuchi</h1>
         <p class="mt-3 font-mono text-sm text-muted">
           &gt; service-designer / software-engineer / ux-analyst / ui-designer / horse-rider
         </p>
       </section>
 
       <section class="mt-16">
-        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">
-          ## profile
-        </h2>
+        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">## profile</h2>
         <Card class="mt-4">
           <Card.Content>
             <p class="text-sm text-muted">
@@ -38,9 +34,7 @@ export const HomePage: FC<HomePageProps> = ({ latestOutputs, externals }) => {
       </section>
 
       <section class="mt-16">
-        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">
-          ## latest_outputs
-        </h2>
+        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">## latest_outputs</h2>
         <div class="mt-4">
           {latestOutputs.length === 0 ? (
             <Card>
@@ -64,15 +58,14 @@ export const HomePage: FC<HomePageProps> = ({ latestOutputs, externals }) => {
       </section>
 
       <section class="mt-16">
-        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">
-          ## externals
-        </h2>
+        <h2 class="font-mono text-xs uppercase tracking-wider text-muted">## externals</h2>
         <div class="mt-4">
           {externals.length === 0 ? (
             <Card>
               <Card.Content>
                 <p class="text-sm text-muted">
-                  外部サイト未登録。<code class="font-mono text-paper">/publish</code> で同期してください。
+                  外部サイト未登録。<code class="font-mono text-paper">/publish</code>{" "}
+                  で同期してください。
                 </p>
               </Card.Content>
             </Card>

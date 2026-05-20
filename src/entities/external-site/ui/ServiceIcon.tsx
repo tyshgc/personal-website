@@ -27,18 +27,12 @@ export const ServiceIcon: FC<ServiceIconProps> = ({ site, class: className }) =>
   if (site.type === "image" && site.iconFile) {
     return (
       <span class={baseClass}>
-        <img
-          src={site.iconFile}
-          alt={site.name}
-          class="h-full w-full rounded object-cover"
-        />
+        <img src={site.iconFile} alt={site.name} class="h-full w-full rounded object-cover" />
       </span>
     );
   }
 
   return (
-    <span class={cn(baseClass, "font-mono text-xs font-semibold")}>
-      {LABEL_MAP[site.type]}
-    </span>
+    <span class={cn(baseClass, "font-mono text-xs font-semibold")}>{LABEL_MAP[site.type]}</span>
   );
 };

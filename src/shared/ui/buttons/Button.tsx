@@ -8,12 +8,10 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary:
-          "bg-accent text-ink hover:bg-accent/90 focus-visible:ring-accent",
+        primary: "bg-accent text-ink hover:bg-accent/90 focus-visible:ring-accent",
         secondary:
           "border border-line bg-transparent text-paper hover:bg-surface focus-visible:ring-line",
-        ghost:
-          "text-paper hover:bg-surface focus-visible:ring-line",
+        ghost: "text-paper hover:bg-surface focus-visible:ring-line",
       },
       size: {
         sm: "h-8 px-3 text-sm",
@@ -28,8 +26,7 @@ const buttonVariants = cva(
   },
 );
 
-type ButtonProps = JSX.IntrinsicElements["button"] &
-  VariantProps<typeof buttonVariants>;
+type ButtonProps = JSX.IntrinsicElements["button"] & VariantProps<typeof buttonVariants>;
 
 export const Button: FC<ButtonProps> = ({
   variant,

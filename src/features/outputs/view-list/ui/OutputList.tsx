@@ -11,8 +11,7 @@ export const OutputList: FC<OutputListProps> = ({ outputs }) => {
   if (outputs.length === 0) {
     return (
       <p class="font-mono text-sm text-muted">
-        no outputs yet — run <code class="text-paper">/publish</code> to sync from
-        Notion.
+        no outputs yet — run <code class="text-paper">/publish</code> to sync from Notion.
       </p>
     );
   }

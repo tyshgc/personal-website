@@ -10,10 +10,7 @@ import type {
   QueryDataSourceParameters,
 } from "@notionhq/client/build/src/api-endpoints";
 
-import type {
-  ExternalSite,
-  ServiceType,
-} from "../src/shared/types/external-site";
+import type { ExternalSite, ServiceType } from "../src/shared/types/external-site";
 import type {
   Output,
   OutputBlock,
@@ -48,7 +45,10 @@ function extractText(page: PageObjectResponse, propName: string): string {
   return prop.rich_text.map((t) => t.plain_text).join("");
 }
 
-function extractSelect<T extends string>(page: PageObjectResponse, propName: string): T | undefined {
+function extractSelect<T extends string>(
+  page: PageObjectResponse,
+  propName: string,
+): T | undefined {
   const prop = page.properties[propName];
   if (prop?.type !== "select" || !prop.select) return undefined;
   return prop.select.name as T;

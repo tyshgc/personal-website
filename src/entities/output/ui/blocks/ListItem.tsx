@@ -9,10 +9,9 @@ import type { OutputBlock } from "@/shared/types/output";
 import { BlockRenderer } from "./BlockRenderer";
 import { RichText } from "../RichText";
 
-type ListItemBlock = (
-  | BulletedListItemBlockObjectResponse
-  | NumberedListItemBlockObjectResponse
-) & { children?: ReadonlyArray<OutputBlock> };
+type ListItemBlock = (BulletedListItemBlockObjectResponse | NumberedListItemBlockObjectResponse) & {
+  children?: ReadonlyArray<OutputBlock>;
+};
 
 type ListItemProps = {
   block: ListItemBlock;

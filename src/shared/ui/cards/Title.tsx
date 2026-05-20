@@ -10,19 +10,11 @@ type TitleProps = PropsWithChildren<
   }
 >;
 
-export const Title: FC<TitleProps> = ({
-  as,
-  class: className,
-  children,
-  ...props
-}) => {
+export const Title: FC<TitleProps> = ({ as, class: className, children, ...props }) => {
   const Tag = as ?? "h2";
   return (
     <Tag
-      class={cn(
-        "text-lg font-semibold tracking-tight text-paper",
-        className as string,
-      )}
+      class={cn("text-lg font-semibold tracking-tight text-paper", className as string)}
       {...props}
     >
       {children}

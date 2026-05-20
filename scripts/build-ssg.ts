@@ -21,9 +21,7 @@ async function resolveCssHref(): Promise<string> {
   const manifest = JSON.parse(raw) as Manifest;
   const entry = manifest["src/styles/global.css"];
   if (!entry?.file) {
-    throw new Error(
-      `Could not resolve src/styles/global.css in vite manifest at ${MANIFEST_PATH}`,
-    );
+    throw new Error(`Could not resolve src/styles/global.css in vite manifest at ${MANIFEST_PATH}`);
   }
   return `/${entry.file}`;
 }

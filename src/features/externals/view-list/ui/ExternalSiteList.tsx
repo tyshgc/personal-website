@@ -11,7 +11,8 @@ export const ExternalSiteList: FC<ExternalSiteListProps> = ({ sites }) => {
   if (sites.length === 0) {
     return (
       <p class="font-mono text-sm text-muted">
-        no external sites registered yet — run <code class="text-paper">/publish</code> to sync from Notion.
+        no external sites registered yet — run <code class="text-paper">/publish</code> to sync from
+        Notion.
       </p>
     );
   }

@@ -92,11 +92,7 @@ export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
           return (
             <ul class="my-4 list-disc pl-6 text-paper">
               {group.items.map((item) => (
-                <ListItem
-                  block={
-                    item as Extract<OutputBlock, { type: "bulleted_list_item" }>
-                  }
-                />
+                <ListItem block={item as Extract<OutputBlock, { type: "bulleted_list_item" }>} />
               ))}
             </ul>
           );
@@ -105,11 +101,7 @@ export const BlockRenderer: FC<BlockRendererProps> = ({ blocks }) => {
           return (
             <ol class="my-4 list-decimal pl-6 text-paper">
               {group.items.map((item) => (
-                <ListItem
-                  block={
-                    item as Extract<OutputBlock, { type: "numbered_list_item" }>
-                  }
-                />
+                <ListItem block={item as Extract<OutputBlock, { type: "numbered_list_item" }>} />
               ))}
             </ol>
           );

@@ -15,13 +15,8 @@ export function createRouter(): Hono {
   const app = new Hono();
 
   app.get("/", async (c) => {
-    const [outputs, externals] = await Promise.all([
-      loadAllOutputs(),
-      loadTopExternalSites(),
-    ]);
-    return c.html(
-      <HomePage latestOutputs={outputs.slice(0, 5)} externals={externals} />,
-    );
+    const [outputs, externals] = await Promise.all([loadAllOutputs(), loadTopExternalSites()]);
+    return c.html(<HomePage latestOutputs={outputs.slice(0, 5)} externals={externals} />);
   });
   app.get("/profile", (c) => c.html(<ProfilePage />));
   app.get("/what-i-deliver", (c) => c.html(<WhatIDeliverPage />));

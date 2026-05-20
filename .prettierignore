@@ -1,5 +1,0 @@
-dist/
-node_modules/
-.wrangler/
-src/content/
-pnpm-lock.yaml

@@ -19,19 +19,14 @@ type VideoSource =
 function resolveSource(block: VideoOrEmbedBlock): VideoSource {
   let url = "";
   if (block.type === "video") {
-    url =
-      block.video.type === "file"
-        ? block.video.file.url
-        : block.video.external.url;
+    url = block.video.type === "file" ? block.video.file.url : block.video.external.url;
   } else {
     url = block.embed.url;
   }
   if (!url) return { kind: "unknown", href: "" };
 
   // YouTube
-  const yt = url.match(
-    /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/,
-  );
+  const yt = url.match(/(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|shorts\/))([\w-]{11})/);
   if (yt?.[1]) {
     return { kind: "youtube", embedUrl: `https://www.youtube.com/embed/${yt[1]}` };
   }
@@ -73,11 +68,7 @@ export const VideoEmbed: FC<VideoEmbedProps> = ({ block }) => {
   if (source.kind === "file") {
     return (
       <figure class="my-6">
-        <video
-          controls
-          preload="metadata"
-          class="w-full rounded-md border border-line"
-        >
+        <video controls preload="metadata" class="w-full rounded-md border border-line">
           <source src={source.src} />
         </video>
       </figure>

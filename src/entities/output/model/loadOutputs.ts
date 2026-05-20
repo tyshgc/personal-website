@@ -21,9 +21,7 @@ export async function loadAllOutputs(): Promise<ReadonlyArray<Output>> {
     }),
   );
 
-  return outputs.sort((a, b) =>
-    b.meta.publishedAt.localeCompare(a.meta.publishedAt),
-  );
+  return outputs.sort((a, b) => b.meta.publishedAt.localeCompare(a.meta.publishedAt));
 }
 
 export async function loadOutputBySlug(slug: string): Promise<Output | null> {

@@ -14,8 +14,7 @@ function annotationClasses(item: RichTextItemResponse): string {
     a.italic && "italic",
     a.strikethrough && "line-through",
     a.underline && "underline underline-offset-2",
-    a.code &&
-      "rounded bg-surface px-1.5 py-0.5 font-mono text-[0.85em] text-paper",
+    a.code && "rounded bg-surface px-1.5 py-0.5 font-mono text-[0.85em] text-paper",
   );
 }
 

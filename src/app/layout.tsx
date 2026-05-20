@@ -10,12 +10,7 @@ type LayoutProps = PropsWithChildren<{
   currentPath?: string;
 }>;
 
-export const Layout: FC<LayoutProps> = ({
-  children,
-  title,
-  description,
-  currentPath,
-}) => {
+export const Layout: FC<LayoutProps> = ({ children, title, description, currentPath }) => {
   const pageTitle = title ? `${title} | ${siteConfig.title}` : siteConfig.title;
   const pageDescription = description ?? siteConfig.description;
 
@@ -48,11 +43,7 @@ export const Layout: FC<LayoutProps> = ({
                     <li>
                       <a
                         href={link.href}
-                        class={
-                          isActive
-                            ? "text-accent"
-                            : "transition-colors hover:text-paper"
-                        }
+                        class={isActive ? "text-accent" : "transition-colors hover:text-paper"}
                       >
                         {link.label.toLowerCase().replace(/\s+/g, "-")}
                       </a>
@@ -67,7 +58,9 @@ export const Layout: FC<LayoutProps> = ({
         <footer class="mt-24 border-t border-line">
           <div class="mx-auto flex max-w-4xl items-center justify-between px-6 py-8 font-mono text-xs text-muted">
             <span>built with hono</span>
-            <span>© {new Date().getFullYear()} {siteConfig.name}</span>
+            <span>
+              © {new Date().getFullYear()} {siteConfig.name}
+            </span>
           </div>
         </footer>
       </body>
