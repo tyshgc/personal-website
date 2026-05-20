@@ -1,0 +1,66 @@
+[
+  {
+    "id": "3645668a-3b01-8061-a3c6-d69891687e05",
+    "name": "Medium",
+    "accountName": "tyshgc",
+    "url": "https://medium.com/@tyshgc",
+    "type": "Medium",
+    "showOnTop": true
+  },
+  {
+    "id": "3645668a-3b01-8010-bad7-f7b4ba29d777",
+    "name": "note",
+    "accountName": "tyshgc",
+    "url": "https://note.com/tyshgc",
+    "type": "note",
+    "showOnTop": true
+  },
+  {
+    "id": "3625668a-3b01-810f-9d90-d31af2ef2596",
+    "name": "YouTube",
+    "accountName": "sierranevadaaa",
+    "url": "https://www.youtube.com/@sierranevadaaa",
+    "type": "YouTube",
+    "showOnTop": true
+  },
+  {
+    "id": "3625668a-3b01-8139-a152-fdf45a25e42b",
+    "name": "Zenn",
+    "accountName": "tyshgc",
+    "url": "https://zenn.dev/tyshgc",
+    "type": "Zenn",
+    "showOnTop": true
+  },
+  {
+    "id": "3625668a-3b01-8158-867c-d0d2bb8a3251",
+    "name": "X",
+    "accountName": "tyshgc",
+    "url": "https://x.com/tyshgc",
+    "type": "X",
+    "showOnTop": true
+  },
+  {
+    "id": "3625668a-3b01-816d-a79b-e405b2a4dcec",
+    "name": "Instagram",
+    "accountName": "tyshgc",
+    "url": "https://www.instagram.com/tyshgc",
+    "type": "Instagram",
+    "showOnTop": true
+  },
+  {
+    "id": "3625668a-3b01-817d-97b3-c0969c9df322",
+    "name": "SpeakerDeck",
+    "accountName": "tyshgc",
+    "url": "https://speakerdeck.com/tyshgc",
+    "type": "SpeakerDeck",
+    "showOnTop": true
+  },
+  {
+    "id": "3625668a-3b01-81d4-b09c-f01b1b46e8dc",
+    "name": "GitHub",
+    "accountName": "tyshgc",
+    "url": "https://github.com/tyshgc",
+    "type": "GitHub",
+    "showOnTop": true
+  }
+]

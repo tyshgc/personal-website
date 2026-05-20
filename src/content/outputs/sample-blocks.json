@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "title": "Sample: 全ブロック表示テスト",
+    "slug": "sample-blocks",
+    "status": "Published",
+    "category": "insights",
+    "tags": ["UI Design", "Tech"],
+    "summary": "ブロックレンダラの動作確認用ダミー記事。`pnpm publish` 実装後は実データで置き換える。",
+    "publishedAt": "2026-05-15",
+    "updatedAt": "2026-05-16",
+    "cover": null
+  },
+  "blocks": [
+    {
+      "object": "block",
+      "id": "b1",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z",
+      "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" },
+      "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false,
+      "archived": false,
+      "in_trash": false,
+      "type": "heading_1",
+      "heading_1": {
+        "color": "default",
+        "is_toggleable": false,
+        "rich_text": [
+          { "type": "text", "text": { "content": "概要", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "概要", "href": null }
+        ]
+      }
+    },
+    {
+      "object": "block",
+      "id": "b2",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z",
+      "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" },
+      "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false,
+      "archived": false,
+      "in_trash": false,
+      "type": "paragraph",
+      "paragraph": {
+        "color": "default",
+        "rich_text": [
+          { "type": "text", "text": { "content": "これは ", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "これは ", "href": null },
+          { "type": "text", "text": { "content": "Bold text", "link": null }, "annotations": { "bold": true, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "Bold text", "href": null },
+          { "type": "text", "text": { "content": " と ", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": " と ", "href": null },
+          { "type": "text", "text": { "content": "italic", "link": null }, "annotations": { "bold": false, "italic": true, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "italic", "href": null },
+          { "type": "text", "text": { "content": " と ", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": " と ", "href": null },
+          { "type": "text", "text": { "content": "code", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": true, "color": "default" }, "plain_text": "code", "href": null },
+          { "type": "text", "text": { "content": " と ", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": " と ", "href": null },
+          { "type": "text", "text": { "content": "外部リンク", "link": { "url": "https://hono.dev" } }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "外部リンク", "href": "https://hono.dev" }
+        ]
+      }
+    },
+    {
+      "object": "block", "id": "b3",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": { "color": "default", "rich_text": [{ "type": "text", "text": { "content": "リスト項目 A", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "リスト項目 A", "href": null }] }
+    },
+    {
+      "object": "block", "id": "b4",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "bulleted_list_item",
+      "bulleted_list_item": { "color": "default", "rich_text": [{ "type": "text", "text": { "content": "リスト項目 B", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "リスト項目 B", "href": null }] }
+    },
+    {
+      "object": "block", "id": "b5",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "code",
+      "code": {
+        "language": "typescript",
+        "caption": [],
+        "rich_text": [{ "type": "text", "text": { "content": "const greet = (name: string) => `hello, ${name}`;", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "const greet = (name: string) => `hello, ${name}`;", "href": null }]
+      }
+    },
+    {
+      "object": "block", "id": "b6",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "callout",
+      "callout": {
+        "color": "default",
+        "icon": { "type": "emoji", "emoji": "💡" },
+        "rich_text": [{ "type": "text", "text": { "content": "ヒント: callout はアイコン付きの注意書きです。", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "ヒント: callout はアイコン付きの注意書きです。", "href": null }]
+      }
+    },
+    {
+      "object": "block", "id": "b7",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "quote",
+      "quote": { "color": "default", "rich_text": [{ "type": "text", "text": { "content": "Quote はアクセントカラーの縦線で強調されます。", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "Quote はアクセントカラーの縦線で強調されます。", "href": null }] }
+    },
+    {
+      "object": "block", "id": "b8",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "bookmark",
+      "bookmark": { "url": "https://hono.dev", "caption": [{ "type": "text", "text": { "content": "Hono - Ultrafast web framework", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "Hono - Ultrafast web framework", "href": null }] }
+    },
+    {
+      "object": "block", "id": "b9",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "toggle",
+      "toggle": { "color": "default", "rich_text": [{ "type": "text", "text": { "content": "クリックで展開", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "クリックで展開", "href": null }] }
+    },
+    {
+      "object": "block", "id": "b10",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "divider", "divider": {}
+    },
+    {
+      "object": "block", "id": "b11",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": true, "archived": false, "in_trash": false,
+      "type": "table",
+      "table": { "table_width": 2, "has_column_header": true, "has_row_header": false },
+      "children": [
+        {
+          "object": "block", "id": "b11-1",
+          "parent": { "type": "block_id", "block_id": "b11" },
+          "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+          "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+          "has_children": false, "archived": false, "in_trash": false,
+          "type": "table_row",
+          "table_row": { "cells": [
+            [{ "type": "text", "text": { "content": "Header A", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "Header A", "href": null }],
+            [{ "type": "text", "text": { "content": "Header B", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "Header B", "href": null }]
+          ] }
+        },
+        {
+          "object": "block", "id": "b11-2",
+          "parent": { "type": "block_id", "block_id": "b11" },
+          "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+          "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+          "has_children": false, "archived": false, "in_trash": false,
+          "type": "table_row",
+          "table_row": { "cells": [
+            [{ "type": "text", "text": { "content": "row1 / a", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "row1 / a", "href": null }],
+            [{ "type": "text", "text": { "content": "row1 / b", "link": null }, "annotations": { "bold": false, "italic": false, "strikethrough": false, "underline": false, "code": false, "color": "default" }, "plain_text": "row1 / b", "href": null }]
+          ] }
+        }
+      ]
+    },
+    {
+      "object": "block", "id": "b12",
+      "parent": { "type": "page_id", "page_id": "00000000-0000-0000-0000-000000000001" },
+      "created_time": "2026-05-15T00:00:00.000Z", "last_edited_time": "2026-05-15T00:00:00.000Z",
+      "created_by": { "object": "user", "id": "u1" }, "last_edited_by": { "object": "user", "id": "u1" },
+      "has_children": false, "archived": false, "in_trash": false,
+      "type": "video",
+      "video": { "type": "external", "external": { "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ" }, "caption": [] }
+    }
+  ]
+}
