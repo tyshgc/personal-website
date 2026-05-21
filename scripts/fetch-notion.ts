@@ -20,6 +20,7 @@ import type {
   OutputStatus,
   OutputTag,
 } from "../src/shared/types/output";
+import { cleanSlugDir, localizeBlocks, localizeUrl } from "./localize-media";
 
 const ROOT = resolve(import.meta.dirname, "..");
 const OUTPUTS_DIR = resolve(ROOT, "src/content/outputs");
@@ -218,6 +219,14 @@ async function syncOutputs(notion: Client, dataSourceId: string): Promise<void> 
     }
     console.log(`  fetching blocks: ${meta.slug} (${meta.title})`);
     const blocks = await fetchBlocksRecursive(notion, page.id);
+
+    const mediaSubdir = `outputs/${meta.slug}`;
+    await cleanSlugDir(mediaSubdir, ROOT);
+    await localizeBlocks(blocks, mediaSubdir, ROOT);
+    if (meta.cover) {
+      meta.cover = { url: await localizeUrl(meta.cover.url, mediaSubdir, ROOT) };
+    }
+
     const output: Output = { meta, blocks };
     const filePath = resolve(OUTPUTS_DIR, `${meta.slug}.json`);
     await writeFile(filePath, JSON.stringify(output, null, 2), "utf8");
@@ -234,7 +243,11 @@ async function syncExternals(notion: Client, dataSourceId: string): Promise<void
   const sites: ExternalSite[] = [];
   for (const page of pages) {
     const site = toExternalSite(page);
-    if (site) sites.push(site);
+    if (!site) continue;
+    if (site.iconFile) {
+      site.iconFile = await localizeUrl(site.iconFile, "externals", ROOT);
+    }
+    sites.push(site);
   }
 
   await mkdir(CONTENT_DIR, { recursive: true });

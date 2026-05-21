@@ -10,7 +10,13 @@ type OutputDetailPageProps = {
 
 export const OutputDetailPage: FC<OutputDetailPageProps> = ({ output }) => {
   return (
-    <Layout title={output.meta.title} description={output.meta.summary} currentPath="/outputs">
+    <Layout
+      title={output.meta.title}
+      description={output.meta.summary}
+      currentPath="/outputs"
+      path={`/outputs/${output.meta.slug}`}
+      ogImage={`/og/${output.meta.slug}.png`}
+    >
       <OutputDetail output={output} />
     </Layout>
   );

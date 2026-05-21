@@ -8,11 +8,23 @@ type LayoutProps = PropsWithChildren<{
   title?: string;
   description?: string;
   currentPath?: string;
+  path?: string;
+  ogImage?: string;
 }>;
 
-export const Layout: FC<LayoutProps> = ({ children, title, description, currentPath }) => {
+export const Layout: FC<LayoutProps> = ({
+  children,
+  title,
+  description,
+  currentPath,
+  path,
+  ogImage,
+}) => {
   const pageTitle = title ? `${title} | ${siteConfig.title}` : siteConfig.title;
   const pageDescription = description ?? siteConfig.description;
+  const canonicalPath = path ?? currentPath ?? "/";
+  const ogUrl = `${siteConfig.url}${canonicalPath}`;
+  const ogImageUrl = `${siteConfig.url}${ogImage ?? "/og/default.png"}`;
 
   return (
     <html lang={siteConfig.locale}>
@@ -21,6 +33,17 @@ export const Layout: FC<LayoutProps> = ({ children, title, description, currentP
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={ogUrl} />
+        <meta property="og:type" content={title ? "article" : "website"} />
+        <meta property="og:site_name" content={siteConfig.name} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:url" content={ogUrl} />
+        <meta property="og:image" content={ogImageUrl} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={ogImageUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
         <link
