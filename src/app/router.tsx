@@ -6,6 +6,7 @@ import { loadAllExternalSites, loadTopExternalSites } from "@/entities/external-
 import { ExternalsPage } from "@/pages/externals";
 import { HomePage } from "@/pages/home";
 import { InquiryPage } from "@/pages/inquiry";
+import { NotFoundPage } from "@/pages/not-found";
 import { OutputDetailPage } from "@/pages/output-detail";
 import { OutputsPage } from "@/pages/outputs";
 import { ProfilePage } from "@/pages/profile";
@@ -42,6 +43,7 @@ export function createRouter(): Hono {
     return c.html(<ExternalsPage sites={sites} />);
   });
   app.get("/inquiry", (c) => c.html(<InquiryPage />));
+  app.get("/404", (c) => c.html(<NotFoundPage />));
 
   return app;
 }
