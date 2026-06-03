@@ -15,3 +15,8 @@
   --color-muted: #e0b28b;
   --color-accent: #fffc36;
 }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+}

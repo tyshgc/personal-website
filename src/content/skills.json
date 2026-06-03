@@ -1,0 +1,299 @@
+[
+  {
+    "id": "3715668a-3b01-80c3-a22a-c8946b668a39",
+    "name": "AI仕様駆動開発",
+    "nameEn": "AI Specification-Driven Development",
+    "category": "AI",
+    "proficiency": 70,
+    "tags": [
+      "実装",
+      "設計",
+      "要求分析",
+      "要件定義"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80db-b1e2-cbda2de17747",
+    "name": "RAG設計",
+    "nameEn": "RAG Design",
+    "category": "AI",
+    "proficiency": 50,
+    "tags": [
+      "実装",
+      "設計",
+      "要求分析",
+      "要件定義"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8096-870b-fb6688d08161",
+    "name": "テックリード",
+    "nameEn": "Tech Lead",
+    "category": "Leadership",
+    "proficiency": 100,
+    "tags": [
+      "Backend",
+      "Frontend",
+      "設計",
+      "実装",
+      "上流工程",
+      "UI Design"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8002-8524-ccdbdd4b670a",
+    "name": "Ruby and Rails",
+    "nameEn": "Ruby and Rails",
+    "category": "Backend",
+    "proficiency": 50,
+    "tags": [
+      "実装",
+      "設計",
+      "Backend"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80e7-aaf4-c980ffcb420e",
+    "name": "Flask",
+    "nameEn": "Flask",
+    "category": "Backend",
+    "proficiency": 50,
+    "tags": [
+      "実装",
+      "設計",
+      "Backend"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8079-822d-efd80fc061fa",
+    "name": "Django",
+    "nameEn": "Django",
+    "category": "Backend",
+    "proficiency": 50,
+    "tags": [
+      "実装",
+      "設計",
+      "Backend"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8089-9473-c27492b72dbd",
+    "name": "AWS",
+    "nameEn": "AWS",
+    "category": "Infurastructure",
+    "proficiency": 40,
+    "tags": [
+      "Database",
+      "設計",
+      "Infrastructure",
+      "IaaS"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8084-9699-f4ccb3afce2a",
+    "name": "Supabase",
+    "nameEn": "Supabase",
+    "category": "Infurastructure",
+    "proficiency": 50,
+    "tags": [
+      "Database",
+      "設計",
+      "Infrastructure",
+      "IaaS"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80bd-a5ff-f95926683e5a",
+    "name": "Google Cloud",
+    "nameEn": "Google Cloud",
+    "category": "Infurastructure",
+    "proficiency": 50,
+    "tags": [
+      "Database",
+      "設計",
+      "Infrastructure",
+      "IaaS"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80dd-b784-ce94d3e4410e",
+    "name": "MySQL",
+    "nameEn": "MySQL",
+    "category": "Infurastructure",
+    "proficiency": 60,
+    "tags": [
+      "Database",
+      "設計",
+      "実装",
+      "Backend",
+      "Infrastructure"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8043-85bd-d71258e61d55",
+    "name": "PostgreSQL",
+    "nameEn": "PostgreSQL",
+    "category": "Infurastructure",
+    "proficiency": 60,
+    "tags": [
+      "Database",
+      "設計",
+      "実装",
+      "Backend",
+      "Infrastructure"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8028-93b1-f906a393cace",
+    "name": "Illustrator ",
+    "nameEn": "Illustrator",
+    "category": "Design",
+    "proficiency": 100,
+    "tags": [
+      "UI Design",
+      "設計",
+      "Graphic Design"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80ae-861f-d54c4a6982f7",
+    "name": "Photoshop",
+    "nameEn": "Photoshop",
+    "category": "Design",
+    "proficiency": 100,
+    "tags": [
+      "UI Design",
+      "設計",
+      "Graphic Design"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8022-809f-dcfd13bc455b",
+    "name": "Figma",
+    "nameEn": "Figma",
+    "category": "Design",
+    "proficiency": 100,
+    "tags": [
+      "UI Design",
+      "設計"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8076-a76a-e17a2787eb72",
+    "name": "Framer",
+    "nameEn": "Framer",
+    "category": "Design",
+    "proficiency": 100,
+    "tags": [
+      "UI Design",
+      "設計"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80dc-9d89-c8c988f26c22",
+    "name": "Node.js",
+    "nameEn": "Node.js",
+    "category": "Backend",
+    "proficiency": 100,
+    "tags": [
+      "実装",
+      "設計",
+      "Backend"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-800e-b995-d4c6adb875bd",
+    "name": "TypeScript",
+    "nameEn": "TypeScript",
+    "category": "Frontend",
+    "proficiency": 100,
+    "tags": [
+      "Frontend",
+      "実装",
+      "設計",
+      "Backend"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-803b-88b8-f079a9f4b480",
+    "name": "Service BluePrint",
+    "nameEn": "Service BluePrint",
+    "category": "上流工程",
+    "proficiency": 100,
+    "tags": [
+      "上流工程",
+      "分析",
+      "設計"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8073-9036-ea9ceacbb452",
+    "name": "Event Storming",
+    "nameEn": "Event Storming",
+    "category": "上流工程",
+    "proficiency": 100,
+    "tags": [
+      "上流工程",
+      "分析",
+      "設計"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80c8-9d44-f5905ac244ff",
+    "name": "RDRA リレーションシップ駆動要求分析",
+    "nameEn": "RDRA Relationship-driven Requirements Analysis",
+    "category": "上流工程",
+    "proficiency": 100,
+    "tags": [
+      "上流工程",
+      "要求分析",
+      "要件定義",
+      "分析"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-8035-b3a7-d0f43a0494fc",
+    "name": "コンポーネント設計",
+    "nameEn": "Component Design",
+    "category": "Frontend",
+    "proficiency": 100,
+    "tags": [
+      "Frontend",
+      "実装",
+      "設計"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80c4-b403-cfbd6c5f6a30",
+    "name": "React",
+    "nameEn": "React",
+    "category": "Frontend",
+    "proficiency": 100,
+    "tags": [
+      "Frontend",
+      "実装",
+      "設計"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-80f4-a6bf-c47df44c1817",
+    "name": "UX分析",
+    "nameEn": "UX Analysis",
+    "category": "分析",
+    "proficiency": 100,
+    "tags": [
+      "分析"
+    ]
+  },
+  {
+    "id": "3715668a-3b01-808f-b277-e1a5067629d3",
+    "name": "UIデザイン",
+    "nameEn": "UI Design",
+    "category": "Design",
+    "proficiency": 100,
+    "tags": [
+      "UI Design",
+      "設計"
+    ]
+  }
+]

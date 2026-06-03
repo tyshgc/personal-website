@@ -20,6 +20,7 @@ import type {
   OutputStatus,
   OutputTag,
 } from "../src/shared/types/output";
+import type { Skill, SkillCategory } from "../src/shared/types/skill";
 import { cleanSlugDir, localizeBlocks, localizeUrl } from "./localize-media";
 
 const ROOT = resolve(import.meta.dirname, "..");
@@ -76,6 +77,12 @@ function extractUrl(page: PageObjectResponse, propName: string): string {
   return prop.url;
 }
 
+function extractNumber(page: PageObjectResponse, propName: string): number {
+  const prop = page.properties[propName];
+  if (prop?.type !== "number" || prop.number === null) return 0;
+  return prop.number;
+}
+
 function extractCheckbox(page: PageObjectResponse, propName: string): boolean {
   const prop = page.properties[propName];
   if (prop?.type !== "checkbox") return false;
@@ -125,6 +132,23 @@ function toMeta(page: PageObjectResponse): OutputMeta | null {
     updatedAt: extractDate(page, "updatedAt"),
   };
   return cover ? { ...base, cover } : base;
+}
+
+function toSkill(page: PageObjectResponse): Skill | null {
+  const name = extractTitle(page, "スキル名");
+  const category = extractSelect<SkillCategory>(page, "カテゴリ");
+  if (!name || !category) {
+    console.warn(`[skip] skill ${page.id} missing スキル名 or カテゴリ`);
+    return null;
+  }
+  return {
+    id: page.id,
+    name,
+    nameEn: extractText(page, "英名"),
+    category,
+    proficiency: extractNumber(page, "スキルの習熟度"),
+    tags: extractMultiSelect<string>(page, "タグ"),
+  };
 }
 
 function toExternalSite(page: PageObjectResponse): ExternalSite | null {
@@ -235,6 +259,23 @@ async function syncOutputs(notion: Client, dataSourceId: string): Promise<void> 
   console.log(`  outputs: written ${written}, skipped ${skipped}`);
 }
 
+async function syncSkills(notion: Client, dataSourceId: string): Promise<void> {
+  console.log(`\nQuerying Skills from ${dataSourceId}...`);
+  const pages = await queryAllPages(notion, dataSourceId);
+  console.log(`  → ${pages.length} entries found`);
+
+  const skills: Skill[] = [];
+  for (const page of pages) {
+    const skill = toSkill(page);
+    if (skill) skills.push(skill);
+  }
+
+  await mkdir(CONTENT_DIR, { recursive: true });
+  const filePath = resolve(CONTENT_DIR, "skills.json");
+  await writeFile(filePath, JSON.stringify(skills, null, 2), "utf8");
+  console.log(`  skills: written ${skills.length} entries to skills.json`);
+}
+
 async function syncExternals(notion: Client, dataSourceId: string): Promise<void> {
   console.log(`\nQuerying External Sites from ${dataSourceId}...`);
   const pages = await queryAllPages(notion, dataSourceId);
@@ -260,11 +301,13 @@ async function main(): Promise<void> {
   const apiKey = requireEnv("NOTION_API_KEY");
   const outputsId = requireEnv("NOTION_OUTPUTS_DATA_SOURCE_ID");
   const externalsId = requireEnv("NOTION_EXTERNALS_DATA_SOURCE_ID");
+  const skillsId = requireEnv("NOTION_SKILLS_DATA_SOURCE_ID");
 
   const notion = new Client({ auth: apiKey });
 
   await syncOutputs(notion, outputsId);
   await syncExternals(notion, externalsId);
+  await syncSkills(notion, skillsId);
 
   console.log("\nDone.");
 }

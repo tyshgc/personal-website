@@ -13,8 +13,3 @@ export async function loadAllExternalSites(): Promise<ReadonlyArray<ExternalSite
     return [];
   }
 }
-
-export async function loadTopExternalSites(): Promise<ReadonlyArray<ExternalSite>> {
-  const all = await loadAllExternalSites();
-  return all.filter((s) => s.showOnTop);
-}
