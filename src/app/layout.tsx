@@ -86,6 +86,11 @@ export const Layout: FC<LayoutProps> = ({
             </span>
           </div>
         </footer>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if(["localhost","127.0.0.1"].includes(location.hostname)){const s=document.createElement("script");s.src="https://unpkg.com/cssstudio";document.head.appendChild(s);}`,
+          }}
+        />
       </body>
     </html>
   );
