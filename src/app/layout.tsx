@@ -88,7 +88,7 @@ export const Layout: FC<LayoutProps> = ({
         </footer>
         <script
           dangerouslySetInnerHTML={{
-            __html: `if(["localhost","127.0.0.1"].includes(location.hostname)){const s=document.createElement("script");s.src="https://unpkg.com/cssstudio";document.head.appendChild(s);}`,
+            __html: `if(["localhost","127.0.0.1"].includes(location.hostname)){const s=document.createElement("script");s.src="https://unpkg.com/cssstudio";s.onload=()=>{const m=window.CSSStudio;(m&&(m.startStudio||m.default&&m.default.startStudio)||(()=>{}))();};document.head.appendChild(s);}`,
           }}
         />
       </body>
