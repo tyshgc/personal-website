@@ -36,7 +36,7 @@ export const SkillsByCategory: FC<SkillsByCategoryProps> = ({ skills }) => {
         const bucket = grouped.get(category);
         if (!bucket || bucket.length === 0) return null;
         return (
-          <section>
+          <section class="min-w-0">
             <h3 class="font-mono text-xs uppercase tracking-wider text-muted">### {category}</h3>
             <ul class="mt-3 flex flex-col gap-3">
               {bucket.map((skill) => (

@@ -52,6 +52,12 @@ public/og/
 .claude/generated/
 .claude/tmp/
 .claude/worktrees/
+.claude/settings.local.json
+
+# ==============================
+# CSS Studio (session-scoped task prompts)
+# ==============================
+.studio/
 
 # ==============================
 # Secrets

@@ -11,10 +11,10 @@ export const SkillGauge: FC<SkillGaugeProps> = ({ skill }) => {
   return (
     <div class="flex items-center gap-3">
       <div class="flex-1 min-w-0">
-        <div class="flex items-baseline justify-between gap-3">
-          <span class="truncate text-sm text-paper">{skill.name}</span>
+        <div class="flex min-w-0 items-baseline justify-between gap-3">
+          <span class="min-w-0 truncate text-sm text-paper">{skill.name}</span>
           {skill.nameEn ? (
-            <span class="truncate font-mono text-xs text-muted">{skill.nameEn}</span>
+            <span class="min-w-0 truncate font-mono text-xs text-muted">{skill.nameEn}</span>
           ) : null}
         </div>
         <div class="mt-1.5 h-1.5 rounded-full bg-surface">
